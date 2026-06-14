@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>广东省人工智能产业协会副秘书长工作规划与沟通引导</title>
+<style>
+:root {
+  --blue:#174A8B; --blue-2:#0E3266; --blue-3:#EAF1FB; --cyan:#2D8CCB; --ink:#172033; --muted:#607089; --line:#DFE7F2; --soft:#F6F9FD; --card:#FFFFFF; --warn:#F2B33D; --green:#26A269; --shadow: 0 18px 45px rgba(14,50,102,.10); --radius: 18px;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; color:var(--ink); background:linear-gradient(180deg,#f7fbff 0%,#ffffff 38%,#f7fbff 100%); line-height:1.65; }
+.progress { position:fixed; left:0; top:0; height:4px; width:0%; background:linear-gradient(90deg,var(--cyan),var(--blue)); z-index:1000; box-shadow:0 0 12px rgba(45,140,203,.35); }
+.layout { display:grid; grid-template-columns: 310px minmax(0,1fr); min-height:100vh; }
+aside { position:sticky; top:0; height:100vh; overflow:auto; padding:22px 18px; background:rgba(255,255,255,.88); backdrop-filter:blur(14px); border-right:1px solid var(--line); z-index:30; }
+.logo { display:flex; gap:12px; align-items:center; margin-bottom:18px; }
+.logo-badge { width:42px; height:42px; border-radius:14px; display:grid; place-items:center; color:#fff; font-weight:900; letter-spacing:.5px; background:linear-gradient(135deg,var(--blue),var(--cyan)); box-shadow:0 10px 24px rgba(23,74,139,.22); }
+.logo-title { font-size:14px; font-weight:800; line-height:1.35; color:var(--blue-2); }
+.logo-sub { font-size:12px; color:var(--muted); margin-top:2px; }
+.search-panel { border:1px solid var(--line); border-radius:16px; padding:12px; background:#fff; box-shadow:0 10px 24px rgba(14,50,102,.06); margin:16px 0; }
+.search-row { display:flex; gap:8px; }
+#searchInput { min-width:0; flex:1; border:1px solid var(--line); border-radius:12px; padding:10px 12px; font-size:14px; outline:none; }
+#searchInput:focus { border-color:var(--cyan); box-shadow:0 0 0 3px rgba(45,140,203,.14); }
+.search-actions,.quick-tools { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+button { appearance:none; border:0; border-radius:12px; padding:9px 12px; background:var(--blue); color:#fff; font-weight:700; cursor:pointer; transition:.18s ease; }
+button:hover { transform:translateY(-1px); box-shadow:0 10px 20px rgba(23,74,139,.18); }
+button:disabled { opacity:.42; cursor:not-allowed; transform:none; box-shadow:none; }
+button.secondary { background:#EAF1FB; color:var(--blue-2); }
+button.ghost { background:#fff; color:var(--muted); border:1px solid var(--line); }
+.search-status { display:flex; justify-content:space-between; gap:8px; margin-top:8px; font-size:12px; color:var(--muted); }
+nav { margin-top:18px; display:grid; gap:8px; }
+nav a { text-decoration:none; color:var(--muted); border:1px solid transparent; border-radius:14px; padding:10px 11px; display:grid; grid-template-columns:32px 1fr; gap:8px; align-items:start; font-size:13px; line-height:1.35; }
+nav a .num { color:var(--blue); font-weight:900; }
+nav a:hover, nav a.active { color:var(--blue-2); background:var(--blue-3); border-color:#CFE0F4; }
+main { min-width:0; }
+.hero { position:relative; overflow:hidden; padding:72px 48px 40px; background:radial-gradient(circle at 80% 0%, rgba(45,140,203,.20), transparent 36%), linear-gradient(135deg,#0E3266 0%,#174A8B 55%,#2D8CCB 100%); color:#fff; }
+.hero::after { content:""; position:absolute; right:-120px; top:-80px; width:420px; height:420px; border-radius:50%; background:radial-gradient(circle, rgba(255,255,255,.22) 0 2px, transparent 2px 12px); opacity:.55; }
+.kicker { position:relative; z-index:1; display:inline-flex; padding:7px 12px; border:1px solid rgba(255,255,255,.32); border-radius:999px; color:rgba(255,255,255,.90); font-size:13px; font-weight:800; letter-spacing:.06em; }
+.hero h1 { position:relative; z-index:1; margin:20px 0 12px; font-size:42px; line-height:1.18; letter-spacing:-.02em; max-width:980px; }
+.hero p { position:relative; z-index:1; max-width:920px; margin:0; color:rgba(255,255,255,.88); font-size:18px; }
+.container { width:min(1120px, calc(100% - 56px)); margin:28px auto 56px; }
+.summary-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:-18px; position:relative; z-index:2; }
+.stat-card { background:#fff; border:1px solid var(--line); border-radius:18px; padding:18px; box-shadow:var(--shadow); }
+.stat-card b { display:block; color:var(--blue); font-size:28px; line-height:1; margin-bottom:8px; }
+.stat-card span { color:var(--muted); font-size:13px; }
+.section { scroll-margin-top:18px; margin:28px 0; background:rgba(255,255,255,.92); border:1px solid var(--line); border-radius:24px; box-shadow:0 12px 34px rgba(14,50,102,.07); overflow:hidden; }
+.section-head { padding:24px 26px 20px; background:linear-gradient(180deg,#fff,#F8FBFF); border-bottom:1px solid var(--line); }
+.section-label { color:var(--blue); font-weight:900; letter-spacing:.08em; font-size:13px; }
+.section h2 { margin:6px 0 0; font-size:28px; line-height:1.25; color:var(--blue-2); }
+.section-body { padding:24px 26px 28px; }
+p { margin:0 0 14px; }
+.lead { font-size:17px; color:#31415A; }
+.callout { border-left:5px solid var(--cyan); background:#F3F8FE; border-radius:16px; padding:15px 17px; color:#27415F; margin:18px 0; }
+.callout.warn { border-left-color:var(--warn); background:#FFF8EA; color:#5B4212; }
+.cards-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:18px 0; }
+.info-card,.conn-card,.step-card,.flow-step,.card-detail,.pressure-card { background:#fff; border:1px solid var(--line); border-radius:18px; padding:18px; box-shadow:0 10px 26px rgba(14,50,102,.06); }
+.info-card h3,.conn-card h3,.step-card h3,.flow-step h3 { margin:0 0 8px; color:var(--blue-2); }
+.connection-map,.accordion-grid,.pressure-list,.steps,.flow { display:grid; gap:14px; }
+.connection-map { grid-template-columns:repeat(2,1fr); }
+.accordion-grid { grid-template-columns:repeat(2,1fr); }
+.flow { grid-template-columns:repeat(4,1fr); margin:18px 0; }
+.flow-step b { display:grid; place-items:center; width:34px; height:34px; border-radius:12px; background:var(--blue-3); color:var(--blue); margin-bottom:10px; }
+.need { color:var(--muted); margin-bottom:10px; }
+.action { color:#2F4059; }
+.card-detail { padding:0; overflow:hidden; }
+.card-detail summary { list-style:none; cursor:pointer; padding:16px 18px; font-weight:900; color:var(--blue-2); display:flex; justify-content:space-between; gap:12px; }
+.card-detail summary::-webkit-details-marker { display:none; }
+.card-detail summary::after { content:"＋"; color:var(--blue); font-weight:900; }
+.card-detail[open] summary::after { content:"－"; }
+.detail-content { border-top:1px solid var(--line); padding:16px 18px; color:#2F4059; background:#FAFCFF; }
+.tabbar { display:flex; gap:8px; flex-wrap:wrap; margin:16px 0; }
+.tab-btn { background:#F0F5FC; color:var(--blue-2); }
+.tab-btn.active { background:var(--blue); color:#fff; }
+.tab-panel { display:none; border:1px solid var(--line); border-radius:18px; padding:18px; background:#fff; }
+.tab-panel.active { display:block; }
+.table-wrap { overflow:auto; border:1px solid var(--line); border-radius:18px; margin:16px 0; }
+table { width:100%; border-collapse:collapse; min-width:680px; background:#fff; }
+th,td { padding:14px 15px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+th { color:var(--blue-2); background:#F4F8FD; font-weight:900; }
+tr:last-child td { border-bottom:0; }
+.pressure-list { grid-template-columns:repeat(2,1fr); }
+.pressure-top { display:flex; align-items:flex-start; gap:10px; color:var(--blue-2); }
+.pressure-top h3 { margin:0; font-size:17px; line-height:1.35; color:var(--blue-2); }
+.pressure-no { flex:0 0 auto; display:inline-grid; place-items:center; width:30px; height:30px; border-radius:10px; background:var(--blue-3); color:var(--blue); font-weight:900; font-size:13px; }
+.pressure-body { margin-top:12px; color:#34465F; }
+.badge { display:inline-flex; align-items:center; white-space:nowrap; border-radius:999px; padding:5px 10px; background:var(--blue-3); color:var(--blue); font-weight:900; font-size:13px; }
+.low-burden { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin:16px 0; }
+.low-burden div { text-align:center; padding:14px 8px; border-radius:16px; border:1px solid var(--line); background:#fff; color:var(--blue-2); font-weight:900; }
+.steps { grid-template-columns:repeat(3,1fr); }
+.footer { display:flex; justify-content:flex-end; align-items:center; gap:12px; margin:34px 0 0; color:var(--muted); font-size:13px; }
+.footer-actions { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+mark.search-hit { background:#FFE08A; padding:0 .12em; border-radius:4px; }
+mark.search-hit.current { background:#FF9F43; color:#231500; outline:2px solid rgba(255,159,67,.35); }
+.back-top-fixed { position:fixed; right:22px; bottom:22px; width:46px; height:46px; border-radius:50%; display:none; z-index:50; font-size:20px; box-shadow:0 12px 28px rgba(14,50,102,.22); }
+.back-top-fixed.show { display:block; }
+@media (max-width: 980px) {
+  .layout { display:block; }
+  aside { position:relative; height:auto; overflow:visible; border-right:0; border-bottom:1px solid var(--line); padding:12px 12px 10px; background:rgba(255,255,255,.96); backdrop-filter:none; }
+  .logo { margin-bottom:10px; }
+  .logo-badge { width:36px; height:36px; border-radius:12px; font-size:12px; }
+  .logo-title { font-size:13px; }
+  .logo-sub { display:none; }
+  .search-panel { margin:10px 0; padding:10px; border-radius:14px; box-shadow:none; }
+  .search-actions { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+  .search-actions button { width:100%; min-height:40px; padding:8px 6px; }
+  .quick-tools { display:none; }
+  nav { margin-top:8px; display:flex; gap:8px; overflow-x:auto; padding:0 0 8px; -webkit-overflow-scrolling:touch; scrollbar-width:thin; }
+  nav a { flex:0 0 auto; display:inline-flex; grid-template-columns:none; align-items:center; max-width:72vw; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; padding:8px 10px; border-radius:999px; font-size:12px; background:#fff; border-color:var(--line); }
+  nav a .num { margin-right:4px; }
+  .hero { padding:38px 20px 34px; }
+  .hero h1 { font-size:32px; }
+  .hero p { font-size:16px; }
+  .container { width:min(100% - 28px,1120px); margin-top:18px; }
+  .summary-grid,.cards-3,.connection-map,.accordion-grid,.flow,.pressure-list,.steps { grid-template-columns:1fr; }
+  .low-burden { grid-template-columns:repeat(2,1fr); }
+  .footer { justify-content:center; }
+  .footer-actions { justify-content:center; width:100%; }
+}
+@media (max-width: 560px) {
+  .summary-grid { grid-template-columns:1fr; }
+  .stat-card { padding:15px; }
+  .section { border-radius:18px; margin:18px 0; }
+  .section-head,.section-body { padding-left:16px; padding-right:16px; }
+  .section h2 { font-size:22px; }
+  .hero h1 { font-size:26px; }
+  .kicker { font-size:12px; }
+  .tabbar { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px; }
+  .tab-btn { width:100%; padding:9px 8px; }
+  .back-top-fixed { right:14px; bottom:14px; width:42px; height:42px; }
+  table { min-width:620px; }
+}
+@media print {
+  aside,.progress,.back-top-fixed,.search-panel,.quick-tools,.footer-actions { display:none !important; } .layout { display:block; } .hero { color:#000; background:#fff; padding:20px 0; } .hero p,.kicker { color:#333; border-color:#ddd; background:#fff; } .container { width:100%; margin:0; } .section { box-shadow:none; break-inside:avoid; } .tab-panel { display:block !important; margin-bottom:10px; } details { break-inside:avoid; }
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="layout">
+  <aside aria-label="导航">
+    <div class="logo"><div class="logo-badge">GDAI</div><div><div class="logo-title">副秘书长工作规划与沟通引导</div><div class="logo-sub">工作全景 · 压力识别 · 支持方向</div></div></div>
+    <div class="search-panel" role="search" aria-label="搜索">
+      <div class="search-row"><input id="searchInput" type="search" placeholder="搜索关键词，如：政府接待、压力、访谈" autocomplete="off" /></div>
+      <div class="search-actions">
+        <button class="secondary" id="prevHit" disabled>上一个</button>
+        <button class="secondary" id="nextHit" disabled>下一个</button>
+        <button class="ghost" id="clearSearch" disabled>清除</button>
+      </div>
+      <div class="search-status"><span id="hitCounter">未搜索</span></div>
+    </div>
+    <div class="quick-tools">
+      <button class="secondary" id="expandAll">展开全部</button>
+      <button class="secondary" id="collapseAll">收起全部</button>
+    </div>
+    <nav id="toc">
+      <a href="#s1"><span class="num">01</span><span>先看清：这份工作真正承载什么</span></a>
+      <a href="#s2"><span class="num">02</span><span>副秘书长的核心价值：连接人与资源</span></a>
+      <a href="#s3"><span class="num">03</span><span>日常工作大致分为七类</span></a>
+      <a href="#s4"><span class="num">04</span><span>理想状态：工作从响应走向沉淀</span></a>
+      <a href="#s5"><span class="num">05</span><span>年度节奏：持续推进与集中爆发</span></a>
+      <a href="#s6"><span class="num">06</span><span>可能最消耗精力的地方</span></a>
+      <a href="#s7"><span class="num">07</span><span>需要进一步了解的真实情况</span></a>
+      <a href="#s8"><span class="num">08</span><span>访谈和问卷会尽量轻量</span></a>
+      <a href="#s9"><span class="num">09</span><span>后续可以形成哪些支持</span></a>
+      <a href="#s10"><span class="num">10</span><span>从三个简单动作开始</span></a>
+    </nav>
+  </aside>
+
+  <main>
+    <header class="hero" id="top">
+      <span class="kicker">工作全景 · 压力识别 · 支持方向</span>
+      <h1>广东省人工智能产业协会副秘书长工作规划与沟通引导</h1>
+      <p>副秘书长的工作并不是单一事项执行，而是在政府、企业、高校、专家、会员、活动和协会内部资源之间进行持续连接、判断和组织。下面的内容希望先把这份工作的全貌呈现出来，帮助识别哪些事项最重要、哪些事项最耗时、哪些地方最需要支持。</p>
+    </header>
+
+    <div class="container" id="searchScope">
+      <div class="summary-grid">
+        <div class="stat-card"><b>10</b><span>个部分，按阅读和沟通顺序展开</span></div>
+        <div class="stat-card"><b>7</b><span>类日常工作，帮助看清真实负荷</span></div>
+        <div class="stat-card"><b>8</b><span>个可能压力点，用于进一步确认</span></div>
+        <div class="stat-card"><b>3</b><span>个简单动作，启动后续支持</span></div>
+      </div>
+
+      <section class="section" id="s1">
+        <div class="section-head"><span class="section-label">01</span><h2>先看清：这份工作真正承载什么</h2></div>
+        <div class="section-body">
+          <p class="lead">副秘书长承担的是协会日常运营中的关键连接角色。工作内容往往横跨政府服务、产业资源、会员服务、人才培训、标准评价、活动组织、成果转化和内部协调等多个方向。</p>
+          <p>这些工作很多不是简单的“办一场会、接待一次来访、准备一份材料”，而是持续地理解需求、协调关系、组织资源、判断价值，并把零散事项沉淀为协会可以长期使用的能力。</p>
+          <div class="cards-3">
+            <div class="info-card"><h3>看清工作全貌</h3><p>把分散在接待、材料、活动、培训、会员、专家和项目中的工作放到一张图里。</p></div>
+            <div class="info-card"><h3>识别真实压力</h3><p>看见碎片化、重复准备、临时协调和隐性劳动，判断哪些压力最值得优先被理解。</p></div>
+            <div class="info-card"><h3>明确后续支持</h3><p>围绕真实工作状态，形成更可执行的工作安排、协作方式、材料资源和外部支持。</p></div>
+          </div>
+          <div class="callout">这不是对个人工作的评价，也不是要求立即执行的新清单。它更像一张工作全景图，用来共同判断：哪些工作最值得被看见，哪些压力最需要被理解，哪些事项后续可以获得更好的支持。</div>
+        </div>
+      </section>
+
+      <section class="section" id="s2">
+        <div class="section-head"><span class="section-label">02</span><h2>副秘书长的核心价值：连接人与资源</h2></div>
+        <div class="section-body">
+          <p>广东省人工智能产业协会作为省级产业平台，天然连接政府、企业、高校、专家、会员、产业活动和社会服务。副秘书长的关键价值，不在于亲自完成所有事情，而在于判断需求、组织资源、推动协同、沉淀成果。</p>
+          <div class="connection-map"><article class="conn-card"><h3>政府部门</h3><div class="need">通常需要：产业研究、政策宣贯、评审评价、行业竞赛、行业展会、场景征集、招商对接。</div><div class="action"><strong>连接动作：</strong>理解真实诉求，组织协会资源，匹配专家、企业、参观点和材料，推动后续合作。</div></article><article class="conn-card"><h3>会员企业</h3><div class="need">通常需要：政策理解、品牌曝光、资源链接、场景机会、会员活动、业务合作。</div><div class="action"><strong>连接动作：</strong>识别企业需求，安排走访和活动参与，推动供需对接与会员服务转化。</div></article><article class="conn-card"><h3>高校院所</h3><div class="need">通常需要：科技成果转化、实验实训室建设、人才联合培养、就业对接。</div><div class="action"><strong>连接动作：</strong>链接企业需求、专家资源、应用场景和评价标准，推动产学研合作。</div></article><article class="conn-card"><h3>专家智库</h3><div class="need">通常需要：咨询、论证、评审、培训、政策研究、产业判断。</div><div class="action"><strong>连接动作：</strong>根据不同任务匹配合适专家，并维护专家参与边界和专业性。</div></article><article class="conn-card"><h3>活动与会议资源</h3><div class="need">通常需要：论坛、大会、竞赛、走访、展览、品牌传播。</div><div class="action"><strong>连接动作：</strong>判断活动价值，组织嘉宾、企业、政府和会务资源，沉淀活动成果。</div></article><article class="conn-card"><h3>内部团队与外部供应商</h3><div class="need">通常需要：材料、执行、设计、会务、研究、纪要、传播。</div><div class="action"><strong>连接动作：</strong>明确任务边界，分配执行动作，保护关键岗位时间。</div></article></div>
+          <div class="callout">这份工作的价值不只是“做了多少事”，更在于让协会的资源、关系和经验被更有效地组织起来。</div>
+        </div>
+      </section>
+
+      <section class="section" id="s3">
+        <div class="section-head"><span class="section-label">03</span><h2>日常工作大致分为七类</h2></div>
+        <div class="section-body">
+          <p>副秘书长每天面对的事项可以先粗分为七类。这个分类的目的，是帮助后续沟通更容易定位：到底是哪一类工作最耗时、最难授权、最容易混乱、最需要资源支持。</p>
+          <div class="accordion-grid"><details class="card-detail"><summary>政府接待与资源对接</summary><div class="detail-content"><p><strong>当前内容：</strong>接待政府来访、组织调研交流、匹配企业、专家、园区、实验室和参观点。</p><p><strong>需要进一步看清：</strong>需要进一步看清接待频率、准备成本、亲自参与边界和会后跟进压力。</p></div></details><details class="card-detail"><summary>会员与企业服务</summary><div class="detail-content"><p><strong>当前内容：</strong>了解会员需求，组织走访、对接、活动参与和服务转化。</p><p><strong>需要进一步看清：</strong>需要进一步看清哪些会员最需要维护，哪些服务最能形成实际价值。</p></div></details><details class="card-detail"><summary>产业研究与政策服务</summary><div class="detail-content"><p><strong>当前内容：</strong>支撑白皮书、产业报告、政府课题、政策宣贯、评审评价。</p><p><strong>需要进一步看清：</strong>需要进一步看清研究任务是否被临时事项打断，材料是否反复准备。</p></div></details><details class="card-detail"><summary>人才培训与资格评价</summary><div class="detail-content"><p><strong>当前内容：</strong>推动职称、人工智能训练师、数字技术工程师、CAIO、AIGC培训等业务。</p><p><strong>需要进一步看清：</strong>需要进一步看清副秘书长在培训评价业务中参与到什么深度。</p></div></details><details class="card-detail"><summary>成果转化与标准评价</summary><div class="detail-content"><p><strong>当前内容：</strong>支撑科技成果评价、团体标准、场景征集、解决方案对接。</p><p><strong>需要进一步看清：</strong>需要进一步看清专家、企业、场景和标准资源是否容易调用。</p></div></details><details class="card-detail"><summary>行业活动与品牌影响力</summary><div class="detail-content"><p><strong>当前内容：</strong>组织XAIR、大赛、论坛、走进实验室和标杆企业等品牌活动。</p><p><strong>需要进一步看清：</strong>需要进一步看清哪些活动必须重点投入，哪些可以交由外部执行资源承接。</p></div></details><details class="card-detail"><summary>内部运营与外部协同</summary><div class="detail-content"><p><strong>当前内容：</strong>材料准备、日程协调、供应商管理、纪要沉淀、信息归档。</p><p><strong>需要进一步看清：</strong>需要进一步看清哪些隐性协调工作最耗时、最容易被忽略。</p></div></details></div>
+        </div>
+      </section>
+
+      <section class="section" id="s4">
+        <div class="section-head"><span class="section-label">04</span><h2>理想状态：工作从响应走向沉淀</h2></div>
+        <div class="section-body">
+          <p>理想状态下，副秘书长的工作不只是被动响应一件又一件临时事项，而是逐步形成一条清晰链路：需求进入协会后，能够被识别、被组织、被推动，并最终沉淀为年度成果。</p>
+          <div class="flow">
+            <div class="flow-step"><b>1</b><h3>需求进入</h3><p>政府来访、企业诉求、会员需求、高校合作、专家推荐、活动邀请、临时材料请求。</p></div>
+            <div class="flow-step"><b>2</b><h3>资源组织</h3><p>匹配协会介绍材料、会员企业、专家智库、参观点、活动平台、外部执行资源。</p></div>
+            <div class="flow-step"><b>3</b><h3>合作推进</h3><p>形成交流、走访、课题、培训、场景征集、评审评价、标准制定或活动合作。</p></div>
+            <div class="flow-step"><b>4</b><h3>成果沉淀</h3><p>转化为合作机会、项目线索、案例素材、报告内容、活动成果、会员价值和年度汇报材料。</p></div>
+          </div>
+          <p>这条链路的关键不是增加复杂流程，而是减少“每次从零开始”。高频事项一旦沉淀为可复用材料、资源清单和经验判断，副秘书长的时间就可以更多用于关键关系维护和高价值判断。</p>
+        </div>
+      </section>
+
+      <section class="section" id="s5">
+        <div class="section-head"><span class="section-label">05</span><h2>年度节奏：持续推进与集中爆发</h2></div>
+        <div class="section-body">
+          <p>协会工作具有明显的年度节奏：部分事项全年持续发生，例如政府接待、资源对接、会员沟通和材料响应；部分事项集中爆发，例如大会、白皮书、竞赛、培训评价和政府课题交付。</p>
+          <div class="tabbar" role="tablist" aria-label="年度节奏切换"><button class="tab-btn active" data-tab="rhythm-0" role="tab">上一年Q4</button><button class="tab-btn " data-tab="rhythm-1" role="tab">Q1</button><button class="tab-btn " data-tab="rhythm-2" role="tab">Q2</button><button class="tab-btn " data-tab="rhythm-3" role="tab">Q3</button><button class="tab-btn " data-tab="rhythm-4" role="tab">Q4</button></div>
+          <div id="rhythm-0" class="tab-panel active" role="tabpanel"><h3>上一年Q4</h3><p><strong>工作重点：</strong>提前确定下一年度重点方向、重点活动、重点项目和核心材料框架。</p><p><strong>需要避免：</strong>不要等到当年Q1才从零开始规划全年工作。</p></div><div id="rhythm-1" class="tab-panel " role="tabpanel"><h3>Q1</h3><p><strong>工作重点：</strong>启动全年重点工作，建立基础资料、重点名单和协作方式。</p><p><strong>需要避免：</strong>不要把Q1完全用于规划而迟迟不启动执行。</p></div><div id="rhythm-2" class="tab-panel " role="tabpanel"><h3>Q2</h3><p><strong>工作重点：</strong>政府课题、培训评价、场景征集、会员服务进入执行高峰。</p><p><strong>需要避免：</strong>不要在高峰期再临时搭建材料和资源基础。</p></div><div id="rhythm-3" class="tab-panel " role="tabpanel"><h3>Q3</h3><p><strong>工作重点：</strong>推动重点项目落地，为大会、白皮书、案例沉淀做准备。</p><p><strong>需要避免：</strong>不要把全年分散任务集中压到Q3完成。</p></div><div id="rhythm-4" class="tab-panel " role="tabpanel"><h3>Q4</h3><p><strong>工作重点：</strong>总结成果、沉淀案例、形成下一年度计划和合作方向。</p><p><strong>需要避免：</strong>不要只做收尾，忽略下一年度的前置准备。</p></div>
+          <div class="table-wrap"><table><thead><tr><th>全年持续推进</th><th>集中爆发事项</th></tr></thead><tbody><tr><td>政府接待、资源对接、会员沟通、专家匹配、材料更新、需求记录。</td><td>XAIR大会、专项课题、白皮书、竞赛活动、集中培训、年度成果发布。</td></tr><tr><td>需要轻量稳定的协作方式支撑。</td><td>需要提前锁定时间、资源和外部支持。</td></tr></tbody></table></div>
+        </div>
+      </section>
+
+      <section class="section" id="s6">
+        <div class="section-head"><span class="section-label">06</span><h2>可能最消耗精力的地方</h2></div>
+        <div class="section-body">
+          <div class="callout warn">以下内容不是结论，而是基于省级行业协会工作特征形成的初步推测。真实情况仍需要结合副秘书长的实际感受和典型案例进一步确认。</div>
+          <div class="pressure-list"><article class="pressure-card"><div class="pressure-top"><span class="pressure-no">01</span><h3>临时来访和临时对接多</h3></div><div class="pressure-body"><p><strong>可能表现：</strong>日程经常被打断，很多事情无法提前规划。</p><p><strong>需要确认：</strong>一周平均有多少临时接待和资源对接？</p></div></article><article class="pressure-card"><div class="pressure-top"><span class="pressure-no">02</span><h3>政府需求不能简单拒绝</h3></div><div class="pressure-body"><p><strong>可能表现：</strong>即使没有明确项目，也需要妥善响应并保持关系。</p><p><strong>需要确认：</strong>哪些政府需求必须高规格响应？哪些可以更轻量地处理？</p></div></article><article class="pressure-card"><div class="pressure-top"><span class="pressure-no">03</span><h3>材料反复准备</h3></div><div class="pressure-body"><p><strong>可能表现：</strong>协会介绍、产业概览、企业名单、专家推荐经常重复制作。</p><p><strong>需要确认：</strong>哪些材料最常被反复要？是否已有稳定可复用材料？</p></div></article><article class="pressure-card"><div class="pressure-top"><span class="pressure-no">04</span><h3>资源匹配依赖个人经验</h3></div><div class="pressure-body"><p><strong>可能表现：</strong>找企业、找专家、找参观点主要靠个人记忆和临时协调。</p><p><strong>需要确认：</strong>哪些资源最难找？哪些资源最值得沉淀为清单？</p></div></article><article class="pressure-card"><div class="pressure-top"><span class="pressure-no">05</span><h3>会后跟进容易被新任务冲掉</h3></div><div class="pressure-body"><p><strong>可能表现：</strong>接待很多，但后续沉淀、复盘、转化不足。</p><p><strong>需要确认：</strong>哪些接待最容易有后续价值？跟进困难主要来自哪里？</p></div></article><article class="pressure-card"><div class="pressure-top"><span class="pressure-no">06</span><h3>工作成果不容易被看见</h3></div><div class="pressure-body"><p><strong>可能表现：</strong>大量协调、沟通、判断属于隐性劳动，很难量化。</p><p><strong>需要确认：</strong>哪些工作明明很重要，但不容易被管理层看到？</p></div></article><article class="pressure-card"><div class="pressure-top"><span class="pressure-no">07</span><h3>对内对外角色切换频繁</h3></div><div class="pressure-body"><p><strong>可能表现：</strong>同时面对政府、企业、专家、协会领导和执行团队。</p><p><strong>需要确认：</strong>哪类沟通最耗精力？哪类沟通最容易反复？</p></div></article><article class="pressure-card"><div class="pressure-top"><span class="pressure-no">08</span><h3>个人时间被碎片化</h3></div><div class="pressure-body"><p><strong>可能表现：</strong>很难留出完整时间处理研究、方案、重点项目和团队建设。</p><p><strong>需要确认：</strong>一天中是否有完整工作块？通常被什么事情打断？</p></div></article></div>
+          <p style="margin-top:16px;">这些压力点并不一定全部存在。更重要的是看清：哪些判断接近真实，哪些并不准确，哪些关键问题还没有被看见。</p>
+        </div>
+      </section>
+
+      <section class="section" id="s7">
+        <div class="section-head"><span class="section-label">07</span><h2>需要进一步了解的真实情况</h2></div>
+        <div class="section-body">
+          <p>工作框架只能帮助建立初步共识，不能替代真实工作观察。副秘书长每天面对的工作压力、协调对象、隐性劳动和个人偏好，需要通过事实和案例进一步还原。</p>
+          <div class="accordion-grid"><details class="card-detail"><summary>真实工作量</summary><div class="detail-content"><p><strong>核心问题：</strong>一周大概有多少接待、会议、材料、对接和跟进？</p><p><strong>了解方式：</strong>先用区间判断，不要求精确统计。</p></div></details><details class="card-detail"><summary>最耗时的事项</summary><div class="detail-content"><p><strong>核心问题：</strong>哪些事情最占时间，但价值不一定最高？</p><p><strong>了解方式：</strong>选出前三类，再补充一个典型案例。</p></div></details><details class="card-detail"><summary>必须亲自处理的事项</summary><div class="detail-content"><p><strong>核心问题：</strong>哪些工作不能授权？为什么不能授权？</p><p><strong>了解方式：</strong>区分“必须亲自判断”和“习惯上自己处理”。</p></div></details><details class="card-detail"><summary>最容易混乱的环节</summary><div class="detail-content"><p><strong>核心问题：</strong>是信息入口、材料准备、资源匹配、会后跟进，还是内部协同？</p><p><strong>了解方式：</strong>用选择、排序和区间判断降低表达负担。</p></div></details><details class="card-detail"><summary>最希望被支持的地方</summary><div class="detail-content"><p><strong>核心问题：</strong>是人手、模板、工具、资源库、外部供应商，还是工作优先级？</p><p><strong>了解方式：</strong>优先判断最想先解决什么。</p></div></details><details class="card-detail"><summary>个人工作习惯与偏好</summary><div class="detail-content"><p><strong>核心问题：</strong>喜欢什么沟通方式？不喜欢什么流程？哪些工具能接受？</p><p><strong>了解方式：</strong>避免后续支持方式脱离真实习惯。</p></div></details></div>
+          <div class="callout">后续沟通不追求一次性问完所有问题。优先还原典型一天、典型一周、典型接待、典型活动和典型混乱场景。</div>
+        </div>
+      </section>
+
+      <section class="section" id="s8">
+        <div class="section-head"><span class="section-label">08</span><h2>访谈和问卷会尽量轻量</h2></div>
+        <div class="section-body">
+          <p>副秘书长本身工作繁忙，后续沟通方式需要控制负担。问卷不应要求大量主观输入，访谈也不应变成漫长汇报。</p>
+          <div class="table-wrap"><table><thead><tr><th>沟通方式</th><th>形式</th><th>目的</th></tr></thead><tbody><tr><td>轻量问卷</td><td>10–15分钟完成，以选择题、排序题和区间判断为主。</td><td>快速获得工作量、压力点和偏好初判。</td></tr><tr><td>深度访谈</td><td>45–60分钟，围绕典型场景展开。</td><td>用案例还原真实工作，而不是写长篇说明。</td></tr><tr><td>案例补充</td><td>只需要提供2–3个高频或高压案例。</td><td>帮助后续支持方案贴近真实场景。</td></tr><tr><td>材料收集</td><td>只使用已有材料，不要求重新整理。</td><td>避免沟通本身变成额外工作。</td></tr></tbody></table></div>
+          <div class="low-burden"><div>少填字</div><div>少输入</div><div>讲案例</div><div>不评价个人</div><div>只找减负点</div></div>
+          <div class="callout">不需要一次性写完整工作总结。只需要帮助判断：哪些内容接近真实，哪些不准确，哪些问题才是真正每天面对的压力。</div>
+        </div>
+      </section>
+
+      <section class="section" id="s9">
+        <div class="section-head"><span class="section-label">09</span><h2>后续可以形成哪些支持</h2></div>
+        <div class="section-body">
+          <p>后续成果应直接服务于副秘书长本人、秘书处协作和管理层决策，而不是停留在抽象报告。</p>
+          <div class="table-wrap"><table><thead><tr><th>后续支持</th><th>说明</th><th>主要使用对象</th></tr></thead><tbody><tr><td>真实工作画像</td><td>还原实际工作内容、时间占比、压力来源和关键协同对象。</td><td>副秘书长、秘书长、内部团队。</td></tr><tr><td>年度工作重点框架</td><td>判断哪些必须亲自抓，哪些可以授权，哪些可以外部支持。</td><td>副秘书长、管理层。</td></tr><tr><td>工作流程支持</td><td>围绕高频高压事项形成更清晰的协作方式，避免过度流程化。</td><td>副秘书长、项目运营人员。</td></tr><tr><td>材料与资源包清单</td><td>识别哪些材料、名单、模板最值得优先沉淀。</td><td>副秘书长、秘书处、外部支持资源。</td></tr><tr><td>外部资源使用方案</td><td>判断哪些工作适合外包、兼职、供应商或会员资源协助。</td><td>副秘书长、管理层。</td></tr><tr><td>管理层沟通材料</td><td>用于说明工作规划、资源需求、人员配置和减负提效方向。</td><td>秘书长、会长、理事会相关人员。</td></tr></tbody></table></div>
+          <div class="callout">这些支持的重点，是让高频工作更容易复用，让关键判断更容易被看见，让副秘书长从重复协调中释放更多时间。</div>
+        </div>
+      </section>
+
+      <section class="section" id="s10">
+        <div class="section-head"><span class="section-label">10</span><h2>从三个简单动作开始</h2></div>
+        <div class="section-body">
+          <p>后续不需要立即进入复杂方案设计。更稳妥的方式，是先完成三个简单动作：确认框架、完成轻量问卷、安排一次访谈。</p>
+          <div class="steps">
+            <div class="step-card"><h3>确认框架</h3><p>判断这份工作全景是否基本符合岗位真实情况，重点看“工作类别”和“可能压力点”是否接近实际感受。</p></div>
+            <div class="step-card"><h3>完成轻量问卷</h3><p>用10–15分钟完成选择、排序和区间判断，减少主观长文本输入。</p></div>
+            <div class="step-card"><h3>安排一次访谈</h3><p>用45–60分钟围绕典型一天、典型一周、典型接待、典型活动和典型压力场景展开。</p></div>
+          </div>
+          <div class="callout">真正需要回答的关键问题是：副秘书长真实工作中最值得被理解、被减负、被支持的地方到底在哪里。</div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-actions"><button id="bottomTop">回到顶部</button><button class="secondary" onclick="window.print()">打印 / 导出 PDF</button></div>
+      </footer>
+    </div>
+  </main>
+</div>
+<button class="back-top-fixed" id="floatingTop" title="回到顶部" aria-label="回到顶部">↑</button>
+<script>
+(function() {
+  const progress = document.getElementById('progress');
+  const navLinks = Array.from(document.querySelectorAll('#toc a'));
+  const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const topTargets = [document.getElementById('bottomTop'), document.getElementById('floatingTop')];
+  const floatingTop = document.getElementById('floatingTop');
+  function updateProgress() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progress.style.width = pct + '%';
+    floatingTop.classList.toggle('show', scrollTop > 520);
+  }
+  window.addEventListener('scroll', updateProgress, {passive:true});
+  updateProgress();
+  topTargets.forEach(btn => btn && btn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'})));
+
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries.filter(e => e.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (!visible) return;
+    navLinks.forEach(a => a.classList.remove('active'));
+    const active = navLinks.find(a => a.getAttribute('href') === '#' + visible.target.id);
+    if (active) active.classList.add('active');
+  }, { rootMargin:'-20% 0px -65% 0px', threshold:[0.1,0.2,0.4] });
+  sections.forEach(s => observer.observe(s));
+
+  document.getElementById('expandAll').addEventListener('click', () => document.querySelectorAll('details').forEach(d => d.open = true));
+  document.getElementById('collapseAll').addEventListener('click', () => document.querySelectorAll('details').forEach(d => d.open = false));
+
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+      btn.parentElement.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === target));
+    });
+  });
+
+  const scope = document.getElementById('searchScope');
+  const searchInput = document.getElementById('searchInput');
+  const prevHit = document.getElementById('prevHit');
+  const nextHit = document.getElementById('nextHit');
+  const clearSearch = document.getElementById('clearSearch');
+  const hitCounter = document.getElementById('hitCounter');
+  let originalHTML = scope.innerHTML;
+  let hits = [];
+  let currentHit = -1;
+  function escapeRegExp(str) { return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+  function clearMarks() {
+    scope.innerHTML = originalHTML;
+    bindDynamicAfterSearch();
+    hits = [];
+    currentHit = -1;
+    prevHit.disabled = nextHit.disabled = clearSearch.disabled = true;
+    hitCounter.textContent = searchInput.value.trim() ? '未找到' : '未搜索';
+  }
+  function markSearch() {
+    const q = searchInput.value.trim();
+    if (!q) { clearMarks(); return; }
+    scope.innerHTML = originalHTML;
+    const regex = new RegExp('(' + escapeRegExp(q) + ')', 'gi');
+    const walker = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        const parent = node.parentElement;
+        if (!parent || ['SCRIPT','STYLE','MARK','INPUT','BUTTON','TEXTAREA'].includes(parent.tagName)) return NodeFilter.FILTER_REJECT;
+        return regex.test(node.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(node => {
+      const span = document.createElement('span');
+      span.innerHTML = node.nodeValue.replace(regex, '<mark class="search-hit">$1</mark>');
+      node.parentNode.replaceChild(span, node);
+    });
+    bindDynamicAfterSearch();
+    hits = Array.from(scope.querySelectorAll('mark.search-hit'));
+    currentHit = hits.length ? 0 : -1;
+    prevHit.disabled = nextHit.disabled = clearSearch.disabled = hits.length === 0;
+    if (!hits.length) { hitCounter.textContent = '0 处结果'; return; }
+    goHit(0);
+  }
+  function goHit(index) {
+    if (!hits.length) return;
+    hits.forEach(h => h.classList.remove('current'));
+    currentHit = (index + hits.length) % hits.length;
+    const hit = hits[currentHit];
+    hit.classList.add('current');
+    hit.scrollIntoView({behavior:'smooth', block:'center'});
+    hitCounter.textContent = (currentHit + 1) + ' / ' + hits.length + ' 处结果';
+  }
+  function bindDynamicAfterSearch() {
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+        btn.parentElement.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === target));
+      });
+    });
+  }
+  searchInput.addEventListener('input', () => {
+    window.clearTimeout(searchInput._timer);
+    searchInput._timer = window.setTimeout(markSearch, 180);
+  });
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); e.shiftKey ? goHit(currentHit - 1) : goHit(currentHit + 1); }
+  });
+  prevHit.addEventListener('click', () => goHit(currentHit - 1));
+  nextHit.addEventListener('click', () => goHit(currentHit + 1));
+  clearSearch.addEventListener('click', () => { searchInput.value=''; clearMarks(); searchInput.focus(); });
+})();
+</script>
+</body>
+</html>

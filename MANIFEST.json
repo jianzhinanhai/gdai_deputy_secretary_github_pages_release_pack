@@ -1,0 +1,22 @@
+{
+  "package_name": "gdai_deputy_secretary_github_pages_release_pack",
+  "purpose": "Publish a single-page HTML site to GitHub Pages for external viewing and mobile browsing.",
+  "entry_file": "index.html",
+  "files": [
+    "index.html",
+    ".nojekyll",
+    ".github/workflows/deploy-pages.yml",
+    "README.md",
+    "DEPLOYMENT.md",
+    "CODEX_PROMPT.md",
+    "AUDIT_CHECKLIST.md",
+    "MANIFEST.json"
+  ],
+  "content_constraints": [
+    "No version label in visible page content",
+    "No baseline/source material label in visible page content",
+    "No checkbox or checklist interaction in the page",
+    "No SOP, scoring tool, project portfolio, or process-discussion content in the page",
+    "Mobile browsing must remain readable and not be obstructed by navigation tags"
+  ]
+}
