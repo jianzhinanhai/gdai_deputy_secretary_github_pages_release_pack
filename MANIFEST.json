@@ -1,22 +1,48 @@
 {
-  "package_name": "gdai_deputy_secretary_github_pages_release_pack",
-  "purpose": "Publish a single-page HTML site to GitHub Pages for external viewing and mobile browsing.",
-  "entry_file": "index.html",
+  "package_name": "gdai_secretary_workplan_github_pages_package",
+  "generated_at": "2026-06-15T08:35:53",
+  "purpose": "GitHub Pages deployment package for external sharing and mobile browsing",
+  "entrypoint": "index.html",
   "files": [
-    "index.html",
-    ".nojekyll",
-    ".github/workflows/deploy-pages.yml",
-    "README.md",
-    "DEPLOYMENT.md",
-    "CODEX_PROMPT.md",
-    "AUDIT_CHECKLIST.md",
-    "MANIFEST.json"
-  ],
-  "content_constraints": [
-    "No version label in visible page content",
-    "No baseline/source material label in visible page content",
-    "No checkbox or checklist interaction in the page",
-    "No SOP, scoring tool, project portfolio, or process-discussion content in the page",
-    "Mobile browsing must remain readable and not be obstructed by navigation tags"
+    {
+      "path": ".github/workflows/deploy-pages.yml",
+      "bytes": 690,
+      "sha256": "704849535f352679810564b5e2f71c2c7b41163c5102581e11422870a438795d"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AUDIT.md",
+      "bytes": 612,
+      "sha256": "7658be906f217b1b557c2658ea9cdf9899a4191b776bf30cf9a8db6a920e6f2d"
+    },
+    {
+      "path": "CODEX_PROMPT.md",
+      "bytes": 1961,
+      "sha256": "6da6c4f24b1fedc89e22b6076028824c148c3ff3c986227638e60a20517b1d0d"
+    },
+    {
+      "path": "DEPLOYMENT.md",
+      "bytes": 1293,
+      "sha256": "2d02b7b463655adf3869a43fef00b82783190da570a9280572b7405dd3fc51f8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1059,
+      "sha256": "6f16394a176802ee72a873075ecd4f894951ad0584e4139003608fecd90749fd"
+    },
+    {
+      "path": "index.html",
+      "bytes": 37345,
+      "sha256": "4aad04131ce2e03961e94cd710782f5377bed4352c8865f46ad79be50a68bd3b"
+    },
+    {
+      "path": "scripts/verify_package.py",
+      "bytes": 1936,
+      "sha256": "3a149d64f70a807cdf5c63519201e2fb71d8a172114048526549c8b28514feae"
+    }
   ]
 }
