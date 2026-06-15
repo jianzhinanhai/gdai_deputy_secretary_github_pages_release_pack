@@ -1,46 +1,53 @@
-# GitHub Pages 发布说明
+# 部署说明
 
-## 1. 发布目标
+## 1. 解压发布包
 
-将 `index.html` 发布为 GitHub Pages 静态站点，用于对外展示《广东省人工智能产业协会副秘书长工作规划与沟通引导》。
-
-## 2. 推荐仓库结构
-
-请将资源包解压到目标 GitHub 仓库根目录，确保根目录存在：
+将本 ZIP 解压到目标 GitHub 仓库根目录。根目录应直接包含：
 
 ```text
 index.html
 .nojekyll
+README.md
 .github/workflows/deploy-pages.yml
 ```
 
-## 3. 使用 GitHub Actions 发布
+不要把整个发布包文件夹作为子目录上传，否则 GitHub Pages 无法从根路径访问页面。
 
-1. 将本资源包全部文件复制到目标仓库根目录。
-2. 提交并推送到 `main` 分支。
-3. 打开 GitHub 仓库：Settings → Pages。
-4. 将 Build and deployment 的 Source 设置为 `GitHub Actions`。
-5. 打开 Actions 页面，确认 `Deploy static HTML to GitHub Pages` workflow 成功运行。
-6. 在 Pages 页面获取公开访问 URL。
+## 2. 提交到 GitHub
 
-## 4. 发布后验证
+```bash
+git status
+git add index.html .nojekyll README.md DEPLOYMENT.md CODEX_PROMPT.md MANIFEST.json AUDIT.md scripts/verify_package.py .github/workflows/deploy-pages.yml
+git commit -m "Publish GDAI secretary work planning page"
+git push origin main
+```
 
-至少完成以下验证：
+## 3. 设置 GitHub Pages
 
-- 桌面 Chrome/Edge 打开页面正常。
-- 手机端 Safari/Chrome 打开页面正常。
-- 首页标题区、搜索区、横向导航不遮挡正文。
-- 搜索框输入关键词后可高亮命中内容。
-- “上一个 / 下一个 / 清除”功能正常。
-- 底部“回到顶部”和右下角悬浮回到顶部功能正常。
-- 页面正文无“版本、基准、适用、附录、SOP、评分器、项目组合、整改、修订、勾选、checkbox”等不应出现的词。
-- 打印或导出 PDF 时，页面结构清晰，无明显遮挡。
+在 GitHub 仓库页面：
+
+1. 进入 `Settings`。
+2. 进入 `Pages`。
+3. Source 选择 `GitHub Actions`。
+4. 等待 Actions 中的 `Deploy GitHub Pages` workflow 成功完成。
+
+## 4. 线上验收
+
+发布完成后检查：
+
+- 首页是否正常打开。
+- 手机竖屏是否可读，顶部导航是否可横向滑动。
+- 锚点跳转是否正常。
+- 搜索框是否可搜索关键词并定位结果。
+- 页面是否无 404、无远程资源加载失败。
+- 对外转发 URL 后，非登录用户是否可访问。
 
 ## 5. 回滚方式
 
-若上线后发现问题：
+如需回滚，可在 Git 中回退上一个提交：
 
-1. 回退最近一次提交，或将旧版 `index.html` 覆盖当前文件。
-2. 推送到 `main`。
-3. 等待 GitHub Actions 重新发布。
-4. 重新验证页面。
+```bash
+git log --oneline
+git revert <commit_hash>
+git push origin main
+```
