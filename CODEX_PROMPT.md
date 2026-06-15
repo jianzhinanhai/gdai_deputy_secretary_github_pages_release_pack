@@ -1,87 +1,58 @@
-# Codex 执行提示词
+# Codex 发布提示词
 
-你现在需要把当前资源包发布到 GitHub Pages，形成可对外访问、手机端可浏览的静态页面。
+你现在需要将我提供的 GitHub Pages 发布包发布到目标 GitHub 仓库，使其成为一个可对外转发、可在手机浏览器正常访问的单页网页。
 
-## 一、任务目标
+## 任务目标
 
-将资源包中的 `index.html` 作为 GitHub Pages 站点首页发布。页面用途是面向广东省人工智能产业协会副秘书长的正式沟通引导页。
+1. 将发布包内容放到仓库根目录。
+2. 使用 `index.html` 作为 GitHub Pages 首页。
+3. 保留 `.nojekyll` 和 `.github/workflows/deploy-pages.yml`。
+4. 不要重写页面内容，不要加入过程性说明，不要改变页面面向秘书长的最终呈现口径。
+5. 提交并推送到 `main` 分支。
+6. 确认 GitHub Pages 使用 GitHub Actions 部署。
+7. 部署完成后返回线上 URL，并完成桌面和手机视口检查。
 
-## 二、关键要求
+## 操作要求
 
-1. 不要重写页面内容。
-2. 不要改变页面定位和正文表达。
-3. 不要新增版本号、基准材料、适用场景、修改说明、操作人说明、附录、过程性讨论。
-4. 不要新增勾选、checkbox、评分器、A/B/C 分级、SOP、项目组合表等调研或咨询产物。
-5. 保证手机端浏览效果：
+- 如果仓库已有旧版 `index.html`，先确认差异，再用本发布包版本覆盖。
+- 不要把发布包文件夹嵌套上传；`index.html` 必须位于仓库根目录。
+- 不要删除 `.github/workflows/deploy-pages.yml`。
+- 不要引入外部 CDN、远程字体、远程图片或额外构建工具。
+- 保持静态站点结构，确保 GitHub Pages 可以直接部署。
 
-   * 顶部搜索和导航不能遮挡正文。
-   * 导航如需保留，应保持横向滑动或折叠，不要占用过多竖向空间。
-   * 正文、卡片、表格、按钮在手机竖屏下应可读、可点击。
-6. 保留现有交互：
+## 建议执行步骤
 
-   * 搜索框。
-   * 上一个 / 下一个 / 清除。
-   * 展开/收起。
-   * 底部和右下角回到顶部。
+```bash
+# 1. 检查仓库状态
+git status
 
-## 三、推荐执行步骤
+# 2. 确认关键文件存在
+ls -la
+ls -la .github/workflows
 
-1. 解压资源包。
-2. 将所有文件复制到目标仓库根目录。
-3. 确认仓库根目录存在：
+# 3. 可选：运行本地校验
+python3 scripts/verify_package.py
 
-   * `index.html`
-   * `.nojekyll`
-   * `.github/workflows/deploy-pages.yml`
-4. 提交到 `main` 分支。
-5. 在 GitHub Pages 设置中选择 Source = GitHub Actions。
-6. 等待 Actions 完成发布。
-7. 记录线上 URL。
-8. 完成上线后审计。
-
-## 四、上线前审计
-
-请检查 `index.html` 可见文本中不得出现以下词语：
-
-```text
-版本
-基准
-适用
-附录
-SOP
-评分器
-项目组合
-整改
-修订
-勾选
-checkbox
+# 4. 提交发布文件
+git add index.html .nojekyll README.md DEPLOYMENT.md CODEX_PROMPT.md MANIFEST.json AUDIT.md scripts/verify_package.py .github/workflows/deploy-pages.yml
+git commit -m "Publish GDAI secretary work planning page"
+git push origin main
 ```
 
-如出现，请先判断是否为页面正文可见内容；若是可见内容，必须删除或改写。
+## 验收标准
 
-## 五、手机端审计
+发布后请检查并反馈：
 
-请至少使用真实浏览器移动端视口审计：
+1. GitHub Actions 是否成功。
+2. GitHub Pages URL 是什么。
+3. 桌面浏览器是否正常显示。
+4. 手机竖屏是否正常浏览。
+5. 顶部导航、搜索、返回顶部是否可用。
+6. 页面是否无 404、无远程资源加载失败。
 
-* iPhone 竖屏宽度：375px 或 390px。
-* Android 竖屏宽度：360px 或 412px。
+最终输出：
 
-重点检查：
-
-1. 第一屏是否被搜索框或导航大量占据。
-2. 目录标签是否遮挡正文。
-3. 表格是否可以横向滚动或自然压缩显示。
-4. 搜索结果跳转是否能定位到正文命中处。
-5. 回到顶部按钮是否遮挡关键文字。
-
-## 六、交付物
-
-完成后请输出：
-
-1. GitHub Pages 线上 URL。
-2. 本次提交 commit hash。
-3. Actions 运行结果。
-4. 桌面端审计结论。
-5. 手机端审计结论。
-6. 如发现问题，列出问题、修复动作和复测结果。
-
+- 发布结果：Go / No-Go
+- 线上 URL
+- 检查结果
+- 如 No-Go，列出阻塞原因和修复动作
