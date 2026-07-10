@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#103b36"><title>正在载入南洋双城行程…</title><style>body{margin:0;display:grid;place-items:center;min-height:100vh;background:#0b2c29;color:#fff;font-family:"PingFang SC","Microsoft YaHei",sans-serif}.box{text-align:center;padding:30px}.dot{width:36px;height:36px;border:3px solid rgba(255,255,255,.25);border-top-color:#d8b56f;border-radius:50%;margin:0 auto 18px;animation:s 1s linear infinite}@keyframes s{to{transform:rotate(360deg)}}p{color:rgba(255,255,255,.7);font-size:13px;line-height:1.7}.retry{display:inline-block;margin-top:12px;color:#f0d49f;text-decoration:none}</style></head><body><div class="box"><div class="dot"></div><strong>正在载入旅行行程</strong><p>首次打开需要加载页面内容和图片，请稍候。</p></div><script>
+const base='https://raw.githubusercontent.com/jianzhinanhai/AI-Study-PPT/main/trips/malaysia-kl-penang-2026/';
+const pageParts=['parts/page-01.txt','parts/page-02.txt','parts/page-03.txt'];
+const imageMap={
+'__IMG_01__':'https://commons.wikimedia.org/wiki/Special:FilePath/Petronas%20Panorama%20II.jpg',
+'__IMG_02__':'https://commons.wikimedia.org/wiki/Special:FilePath/Petronas%20Towers%20at%20Night%20-%20from%20the%20base%20upwards.jpg',
+'__IMG_03__':'https://commons.wikimedia.org/wiki/Special:FilePath/Mosque%20Jamek.jpg',
+'__IMG_04__':'https://commons.wikimedia.org/wiki/Special:FilePath/Little%20Children%20on%20a%20Bicycle.jpg',
+'__IMG_05__':'https://commons.wikimedia.org/wiki/Special:FilePath/KekLokSi%20Pano%202015.jpg',
+'__IMG_06__':'https://commons.wikimedia.org/wiki/Special:FilePath/Batu%20Ferringhi%20Sunset.jpg',
+'__IMG_07__':'https://commons.wikimedia.org/wiki/Special:FilePath/Lim%20Jetty.jpg',
+'__IMG_08__':'https://commons.wikimedia.org/wiki/Special:FilePath/Merdeka%20Square%20Kuala%20Lumpur.jpg',
+'__IMG_09__':'https://commons.wikimedia.org/wiki/Special:FilePath/Khoo%20Kongsi%20(I).jpg',
+'__IMG_10__':'https://commons.wikimedia.org/wiki/Special:FilePath/Penang%20Hill%20View.jpg',
+'__IMG_11__':'https://commons.wikimedia.org/wiki/Special:FilePath/Pinang%20Peranakan%20Mansion%20(I).jpg'};
+async function getText(url){const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw new Error(url+' '+r.status);return r.text()}
+(async()=>{try{let html=(await Promise.all(pageParts.map(p=>getText(base+p)))).join('');for(const [key,url] of Object.entries(imageMap))html=html.split(key).join(url);document.open();document.write(html);document.close()}catch(e){document.body.innerHTML='<div class="box"><strong>页面加载失败</strong><p>请检查网络后刷新页面。<br>'+String(e.message||e)+'</p><a class="retry" href="">重新加载</a></div>';console.error(e)}})();
+</script></body></html>
