@@ -1,19 +1,19 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#103b36"><title>正在载入南洋双城行程…</title><style>body{margin:0;display:grid;place-items:center;min-height:100vh;background:#0b2c29;color:#fff;font-family:"PingFang SC","Microsoft YaHei",sans-serif}.box{text-align:center;padding:30px}.dot{width:36px;height:36px;border:3px solid rgba(255,255,255,.25);border-top-color:#d8b56f;border-radius:50%;margin:0 auto 18px;animation:s 1s linear infinite}@keyframes s{to{transform:rotate(360deg)}}p{color:rgba(255,255,255,.7);font-size:13px;line-height:1.7}.retry{display:inline-block;margin-top:12px;color:#f0d49f;text-decoration:none}</style></head><body><div class="box"><div class="dot"></div><strong>正在载入旅行行程</strong><p>首次打开需要加载页面内容和图片，请稍候。</p></div><script>
 const base='https://raw.githubusercontent.com/jianzhinanhai/AI-Study-PPT/main/trips/malaysia-kl-penang-2026/';
-const pageParts=['parts/page-01.txt?v=20260710d','parts/page-02.txt?v=20260710d','parts/page-03.txt?v=20260710d'];
+const pageParts=['parts/page-01.txt?v=20260710e','parts/page-02.txt?v=20260710e','parts/page-03.txt?v=20260710e'];
+const fallback='https://raw.githubusercontent.com/Mangluu/passage/95479b1f68439d3c0c8b7a58e2736161f3d9c1f7/src/assets/cities/my/1.jpg';
 const imageMap={
-'__IMG_01__':'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/The_Twins_SE_Asia_2019_%2849171985716%29_%28cropped%29_2.jpg/800px-The_Twins_SE_Asia_2019_%2849171985716%29_%28cropped%29_2.jpg',
-'__IMG_02__':'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/The_Twins_SE_Asia_2019_%2849171985716%29_%28cropped%29_2.jpg/800px-The_Twins_SE_Asia_2019_%2849171985716%29_%28cropped%29_2.jpg',
-'__IMG_03__':'https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/20190822_Jamek_Mosque_Kolam_Biru-1.jpg/800px-20190822_Jamek_Mosque_Kolam_Biru-1.jpg',
-'__IMG_04__':'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Motion_And_Stillness_%28243518115%29.jpeg/800px-Motion_And_Stillness_%28243518115%29.jpeg',
-'__IMG_05__':'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Kek_Lok_Si_at_dusk.jpg/800px-Kek_Lok_Si_at_dusk.jpg',
-'__IMG_06__':'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Batu_Ferringhi%2C_George_Town%2C_Penang_2023.jpg/800px-Batu_Ferringhi%2C_George_Town%2C_Penang_2023.jpg',
-'__IMG_07__':'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Lim_Jetty_in_George_Town%2C_Penang.jpg/800px-Lim_Jetty_in_George_Town%2C_Penang.jpg',
-'__IMG_08__':'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Kuala_Lumpur_Sultan_Abdul_Building.jpg/800px-Kuala_Lumpur_Sultan_Abdul_Building.jpg',
-'__IMG_09__':'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Khoo_Kongsi_%28I%29.jpg/800px-Khoo_Kongsi_%28I%29.jpg',
-'__IMG_10__':'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Penang_Hil%2C_George_Town%2C_Penang_2023.jpg/800px-Penang_Hil%2C_George_Town%2C_Penang_2023.jpg',
-'__IMG_11__':'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Pinang_Peranakan_Mansion_%28I%29.jpg/800px-Pinang_Peranakan_Mansion_%28I%29.jpg'};
-const fallback='data:image/svg+xml;charset=utf-8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#174d45"/><stop offset="1" stop-color="#0b2c29"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"/><text x="50%" y="50%" text-anchor="middle" fill="#e8cf9c" font-family="sans-serif" font-size="40">TRAVEL IMAGE</text></svg>');
+'__IMG_01__':fallback,
+'__IMG_02__':'https://commons.wikimedia.org/wiki/Special:FilePath/Petronas%20Towers%20at%20Night%20-%20from%20the%20base%20upwards.jpg?width=1200',
+'__IMG_03__':'https://commons.wikimedia.org/wiki/Special:FilePath/Mosque%20Jamek.jpg?width=1200',
+'__IMG_04__':'https://commons.wikimedia.org/wiki/Special:FilePath/Little%20Children%20on%20a%20Bicycle.jpg?width=1200',
+'__IMG_05__':'https://commons.wikimedia.org/wiki/Special:FilePath/KekLokSi%20Pano%202015.jpg?width=1200',
+'__IMG_06__':'https://commons.wikimedia.org/wiki/Special:FilePath/Batu%20Ferringhi%20Sunset.jpg?width=1200',
+'__IMG_07__':'https://commons.wikimedia.org/wiki/Special:FilePath/Lim%20Jetty.jpg?width=1200',
+'__IMG_08__':'https://commons.wikimedia.org/wiki/Special:FilePath/Merdeka%20Square%20Kuala%20Lumpur.jpg?width=1200',
+'__IMG_09__':'https://commons.wikimedia.org/wiki/Special:FilePath/Khoo%20Kongsi%20(I).jpg?width=1200',
+'__IMG_10__':'https://commons.wikimedia.org/wiki/Special:FilePath/Penang%20Hill%20View.jpg?width=1200',
+'__IMG_11__':'https://commons.wikimedia.org/wiki/Special:FilePath/Pinang%20Peranakan%20Mansion%20(I).jpg?width=1200'};
 async function getText(url){const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw new Error(url+' '+r.status);return r.text()}
-(async()=>{try{let html=(await Promise.all(pageParts.map(p=>getText(base+p)))).join('');for(const [key,url] of Object.entries(imageMap))html=html.split(key).join(url);html=html.replace(/<img /g,'<img loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src=\''+fallback+'\'" ');document.open();document.write(html);document.close()}catch(e){document.body.innerHTML='<div class="box"><strong>页面加载失败</strong><p>请检查网络后刷新页面。<br>'+String(e.message||e)+'</p><a class="retry" href="">重新加载</a></div>';console.error(e)}})();
+(async()=>{try{let html=(await Promise.all(pageParts.map(p=>getText(base+p)))).join('');for(const [key,url] of Object.entries(imageMap))html=html.split(key).join(url);html=html.replace(/<img /g,`<img loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${fallback}'" `);document.open();document.write(html);document.close()}catch(e){document.body.innerHTML='<div class="box"><strong>页面加载失败</strong><p>请检查网络后刷新页面。<br>'+String(e.message||e)+'</p><a class="retry" href="">重新加载</a></div>';console.error(e)}})();
 </script></body></html>
