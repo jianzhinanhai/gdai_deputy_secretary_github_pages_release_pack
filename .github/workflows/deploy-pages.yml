@@ -21,14 +21,30 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout publishing repository
         uses: actions/checkout@v4
+
+      - name: Checkout canonical visual-map source
+        uses: actions/checkout@v4
+        with:
+          repository: jianzhinanhai/AI-Study-PPT
+          ref: main
+          path: _visual-source
+
+      - name: Sync FY27 incentive visual map
+        run: |
+          mkdir -p microsoft-partner-incentives-fy27
+          rsync -a --delete _visual-source/microsoft-partner-incentives-fy27/ microsoft-partner-incentives-fy27/
+          rm -rf _visual-source
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
